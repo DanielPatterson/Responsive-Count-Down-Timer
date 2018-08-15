@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<!-- 
+	// ///////////////////////////////////////////////////////////////////////////////////////////
+	// OG:TITLES 
+	// -->
+	<meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- end of :: OG:TITLES -->
+
+    <link rel="shortcut icon" href="" />
+
+    <!-- 
+	// ///////////////////////////////////////////////////////////////////////////////////////////
+	// META THEME THE BROWSER BAR IN MOBILE
+	// -->
+    <meta name="theme-color" content="#00A3AD"><!-- Chrome, Firefox OS and Opera -->
+    <meta name="msapplication-navbutton-color" content="#00A3AD"><!-- Windows Phone -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00A3AD"><!-- iOS Safari -->
+    <!-- end of :: META THEME THE BROWSER BAR IN MOBILE -->
+
+    <!-- 
+	// ///////////////////////////////////////////////////////////////////////////////////////////
+	// ADD A FAVICON/BROWSER ICON TO THE BROWSER BAR IN MOBILE
+	// -->
+    <!-- Icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="browser-icon-192px.png">
+    <!-- Reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="browser-icon.png">
+    <!--IOS-->
+    <link rel="apple-touch-icon" href="browser-icon-310px.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="browser-icon-76px.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="browser-icon-120px.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="browser-icon-152px.png">
+    <!-- Multiple icons for IE -->
+    <meta name="msapplication-square70x70logo" content="browser-icon-70px.png">
+    <meta name="msapplication-square150x150logo" content="browser-icon-150px.png">
+    <meta name="msapplication-square310x310logo" content="browser-icon-310px.png">
+    <meta name="msapplication-wide310x150logo" content="browser-icon-310px-150px.png">
+    <!-- end of ::  -->
+
+    <title>CountDown Timer</title>
+ 
+    <!-- 
+	// ///////////////////////////////////////////////////////////////////////////////////////////
+	// CORE CSS DEPENDENCIES
+	// -->
+	
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <!-- end of :: CORE CSS DEPENDENCIES -->
+
+    <style>
+    /* ----------------------------------------------------------------------- 
+     * GLOBAL
+     * --------------------------------------------------------------------- */
+    * {
+    margin: 0;
+    outline: none;
+    padding: 0;
+    }
+	body, html {
+	font-weight: bold;
+	height: 100%;
+	width: 100%; 
+	}
+	/* end of :: GLOBAL */
+
+	/* ----------------------------------------------------------------------- 
+     * SECTIONS
+     * --------------------------------------------------------------------- */
+	#section-01, #section-02, #section-03 {
+	height: 100vh; 
+	padding-top: 80px;
+	}
+	/* end of :: SECTIONS */
+
+	/* ----------------------------------------------------------------------- 
+     * COUNTDOWN TIMER
+     * --------------------------------------------------------------------- */
+	.countdown_container {
+	background: #efefef;
+	}
+	.countdown_container h2 {
+	color: #161616;
+	}
+	.countdown_container {
+	padding: 40px 0 30px 0;
+	}
+	.countdown_container>.row {
+	display: flex;
+	display: -ms-flex;
+	align-items: center;
+	}
+	#countdown {
+	display: inline-block;
+	float: right;
+	position: relative;
+	}
+	#countdown h6 {
+	margin-bottom: 1em;
+	}
+	#countdown>p {
+	margin-bottom: 1em;
+	font-size: 18px;
+	}
+	#countdown>.row {
+	position: relative;
+	float: left;
+	}
+	#countdown>div {
+	display: inline-block;
+	}
+	#countdown .countdown-icon {
+	font-size: 3em;
+	line-height: 1em;
+	}
+	#countdown>.row>.countdown-timer {
+	display: inline-block
+	}
+	.countdown-timer .heading-secondary {
+	font-size: 2.675em;
+	line-height: 0.9;
+	}
+	.countdown-timer .heading-senary {
+	font-size: 18px;
+	}
+	#countdown .semi-colon {
+	padding: 0px;
+	vertical-align: top;
+	}
+	#countdown .unit {
+	margin-top: -5px;
+	vertical-align: top;
+	}
+	#countdown .icon {
+	vertical-align: top;
+	}
+	.countdown_container h2 {
+	width: 100%;
+	}
+	.equalWidth {
+	width: 4em;
+	}
+	@media only screen and (max-width: 860px) {
+		.countdown_container>.row {
+		padding: 0;
+		display: inline-block !important;
+		}
+		.countdown-timer .heading-secondary {
+		font-size: 1.5em;
+		}
+		.countdown-timer .heading-senary {
+		font-size: 0.8em;
+		}
+		#countdown .countdown-icon {
+		font-size: 2.675em;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.equalWidth {
+		width: 3em;
+		}
+	}
+
+	@media only screen and (max-width: 640px) {
+		.countdown_container h2 {
+		font-size: 1.2em;
+		}
+		#countdown {
+		float: none;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.equalWidth {
+		width: 2em;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		.equalWidth {
+		width: 3em;
+		}
+	}
+
+	@media only screen and (max-width: 350px) {
+		.equalWidth {
+		width: 2.5em;
+		}
+	}
+	/* end of :: COUNTDOWN TIMER */
+
+	</style>
+
+</head>
+
+<body id="parallax">
+<!-- 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+// TEMPLATE CODE
+// -->
+
+<section class="countdown-timer">
+    <div class="countdown_container center">
+        <div class="row">
+            <div class="column large-6 medium-6 callout center">
+                <h2 class="">2019 begins in...</h2>
+            </div>
+            <div class="column large-6 medium-6 small-12 center">
+                <div id="countdown">
+                    <div class="icon">
+                        <span class="countdown-icon ico ico-seven heading-secondary nomargin">&#160;</span>
+                    </div>
+                    <div class="days equalWidth">
+                        <span class="number day heading-secondary">--</span><br>
+                        <span class="unit heading-senary">Days</span>
+                    </div>
+                    <div class=" semi-colon">
+                        <span class="heading-secondary nomargin">:</span>
+                    </div>
+                    <div class="hours equalWidth">
+                        <span class="number hour heading-secondary">--</span><br>
+                        <span class="unit heading-senary">Hrs</span>
+                    </div>
+                    <div class="semi-colon">
+                        <span class="heading-secondary nomargin">:</span>
+                    </div>
+                    <div class="minutes equalWidth">
+                        <span class="number minute heading-secondary">--</span><br>
+                        <span class="unit heading-senary">Mins</span>
+                    </div>
+                    <div class="semi-colon">
+                        <span class="heading-secondary nomargin">:</span>
+                    </div>
+                    <div class="seconds equalWidth">
+                        <span class="number second heading-secondary">--</span><br>
+                        <span class="unit heading-senary">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+// CORE JS DEPENDENCIES
+// -->
+<script type="text/javascript">
+    if (!window.console) console = {
+        log: function() {}
+    };
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<!-- end of :: CORE JS DEPENDENCIES -->
+
+<!-- 
+// ///////////////////////////////////////////////////////////////////////////////////////////
+// CUSTOM JS
+// -->
+<script>
+$(document).ready(function() {
+	injectCountdown();
+});
+</script>
+<script>
+function CountDownTimer(dt, id) {
+
+    var end = new Date(dt);
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+
+        var now = new Date();
+        var distance = end - now;
+
+        if (distance < 0) { //if countdown has reached zero
+            clearInterval(timer);
+            $('#' + id).remove();
+            return;
+        }
+
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        days = checkDigits(days, "days");
+        hours = checkDigits(hours, "hours");
+        minutes = checkDigits(minutes, "minutes");
+        seconds = checkDigits(seconds, "seconds");
+
+        function checkDigits(unitValue, unitCopy) {
+            if (unitValue <= 9) {
+                var unitValue = unitValue + "";
+                while (unitValue.length <= 1) {
+                    unitValue = "0" + unitValue;
+                }
+            }
+            return unitValue;
+        }
+
+        $('#' + id + ' .days .number').html(days);
+        $('#' + id + ' .hours .number').html(hours);
+        $('#' + id + ' .minutes .number').html(minutes);
+        $('#' + id + ' .seconds .number').html(seconds);
+
+        if (days == 1 || days == "1") {
+            $('#' + id + ' .days .unit').text(" Day ");
+        } else {
+            $('#' + id + ' .days .unit').text(" Days ");
+        }
+
+        if (hours == 1 || hours == "1") {
+            $('#' + id + ' .hours .unit').text(" Hr ");
+        } else {
+            $('#' + id + ' .hours .unit').text(" Hrs ");
+        }
+
+        if (minutes == 1 || minutes == "1") {
+            $('#' + id + ' .minutes .unit').text(" Min");
+        } else {
+            $('#' + id + ' .minutes .unit').text(" Mins");
+        }
+
+        if (seconds == 1 || seconds == "1") {
+            $('#' + id + ' .seconds .unit').text(" Sec");
+        } else {
+            $('#' + id + ' .seconds .unit').text(" Secs");
+        }
+
+    }
+
+    timer = setInterval(showRemaining, 1000);
+
+}
+
+var injectCountdown = function() {
+    var findBanner = setInterval(function() {
+        if ($('.countdown-timer').length > 0) {
+            CountDownTimer('Dec 31 2018 23:59:59 GMT+1000 (AUS Eastern Standard Time)', 'countdown');
+            clearInterval(findBanner);
+        }
+    }, 500);
+}                      
+</script>
+<!-- end of :: CUSTOM JS DEPENDENCIES -->
+</body>
+</html>
